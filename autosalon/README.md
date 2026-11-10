@@ -1,4 +1,4 @@
-# Автосалон — лабораторна робота (Node.js)
+# Автосалон — лабораторна - 3 (Node.js)
 
 Предметна область: **марки машин, комплектація, клієнт, продаж, додаткові опції**.
 
@@ -82,21 +82,3 @@ npm start
 | `GET /:table/:id/edit` | форма редагування |
 | `POST /:table/:id` | збереження змін (з валідацією) |
 | `POST /:table/:id/delete` | видалення (з перевіркою посилань) |
-
-## Скидання даних
-
-Видаліть `data/db.json` і перезапустіть сервер — база відновиться з початковими даними.
-
-
-## Розгортання на Railway
-
-1. Завантажте папку проєкту в репозиторій GitHub (без `node_modules`).
-2. На [railway.app](https://railway.app): **New Project -> Deploy from GitHub repo**.
-3. У **Settings -> Networking -> Generate Domain** створіть публічну адресу.
-
-Railway сам виконує `npm install` і `npm start`; порт читається зі змінної `PORT`.
-Тестові акаунти (admin/admin123, manager/manager123, visitor/visitor123) вже є у файловій базі.
-
-**Збереження даних.** Записи зберігаються у `data/db.json` усередині контейнера.
-Щоб дані не зникали після передеплою: **Settings -> Volumes** (mount path `/data`)
-та змінна `DATA_DIR=/data` у **Variables**.
